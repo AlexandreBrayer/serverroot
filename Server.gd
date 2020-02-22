@@ -40,6 +40,8 @@ func _player_disconnected():
 func _connected_ok():
 	print("User connected")
 	print(get_tree().get_network_unique_id())
+	var id = get_tree().get_network_unique_id()
+	rpc_id(1,"salut",id)
 	
 func _connected_fail():
 	pass
@@ -53,3 +55,6 @@ func _on_btnHost_pressed():
 func _on_btnJoin_pressed():
 	print("Join request")
 	join_server()
+
+remote func salut(id):
+	print(id)
