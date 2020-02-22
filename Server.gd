@@ -30,10 +30,10 @@ func join_server():
 	
 	host.create_client($txtIP.text, int($txtPort.text))
 	get_tree().set_network_peer(host)
-	
-func _player_connected():
-	pass
-	
+
+func _player_connected(_id):
+	hide()
+
 func _player_disconnected():
 	print("Player disconnected")
 
