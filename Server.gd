@@ -32,12 +32,18 @@ func join_server():
 	get_tree().set_network_peer(host)
 	
 func _player_connected():
-	print("User connected")
+	pass
+	
+func _player_disconnected():
+	print("Player disconnected")
 
 func _connected_ok():
 	print("User connected")
 	print(get_tree().get_network_unique_id())
 	
+func _connected_fail():
+	pass
+
 func _server_disconnect():
 	print("Disconected")
 
